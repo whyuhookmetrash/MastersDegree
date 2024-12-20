@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4928884685301198693}
   - component: {fileID: 2803394291095949023}
-  m_Layer: 0
-  m_Name: Circle
+  m_Layer: 7
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 874945406731175259}
   - component: {fileID: 946330030901495873}
   - component: {fileID: 5373998599394185461}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EnemyBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -193,3 +193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c3fdb48caeab104782e48a14c3ea67c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 3
+  detectRange: 5
+  rayTargetLayer:
+    serializedVersion: 2
+    m_Bits: 768
