@@ -135,8 +135,8 @@ MonoBehaviour:
   moveSpeed: 3
   healthPoints: 100
   detectRange: 5
-  attackRange: 5
-  huntingRange: 10
+  attackRange: 10
+  huntingRange: 20
   helpRange: 5
   prepairToAttackTime: 0.5
   attackAnimationTime: 0
@@ -147,6 +147,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 640
   detectPlayer: 0
+  maxStep: 2
+  dangerousRange: 5
+  safeRange: 7
+  afkRange: 10
 --- !u!58 &3321867449505198571
 CircleCollider2D:
   m_ObjectHideFlags: 0

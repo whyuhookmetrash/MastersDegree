@@ -26,11 +26,11 @@ public class EnemyBaseController : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 direction = Vector2.zero;
     protected Vector2 playerPosition;
-    private Vector2 selfPosition;
+    protected Vector2 selfPosition;
     private Vector2 spawnPosition;
     private Vector2 goPosition;
 
-    private float toPlayerDistance = 0f;
+    protected float toPlayerDistance = 0f;
     public bool detectPlayer = false;
     private bool seePlayer = false;
     public enum enemyState { Idle, PrepairToAttack, Attack, Strafe, Hunting, BackToSpawn }
