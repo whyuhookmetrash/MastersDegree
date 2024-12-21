@@ -214,6 +214,63 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1031144034
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.1634688
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.8821
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836373472681939186, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_Name
+      value: Stormtrooper (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
 --- !u!1 &1035166168
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,6 +526,120 @@ MonoBehaviour:
   m_MinRegionArea: 0
   m_HideEditorLogs: 0
   m_NavMeshData: {fileID: 23800000, guid: cf2f40fb4d6b2ac4298d3a653cd745d3, type: 2}
+--- !u!1001 &1124579377
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.022508
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.438035
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836373472681939186, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_Name
+      value: Stormtrooper (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+--- !u!1001 &1129247693
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.5173345
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.629757
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836373472681939186, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_Name
+      value: Stormtrooper (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
 --- !u!1 &1191679747
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,6 +673,348 @@ Transform:
   - {fileID: 1035166172}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1575638608
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.527682
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.93237334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836373472681939186, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_Name
+      value: Stormtrooper (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+--- !u!1001 &1780862752
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.9313328
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.7613463
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836373472681939186, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_Name
+      value: Stormtrooper (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+--- !u!1001 &1890105818
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.9717467
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.6396165
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836373472681939186, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_Name
+      value: Stormtrooper (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+--- !u!1001 &1983450865
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.467061
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.6095502
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836373472681939186, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_Name
+      value: Stormtrooper (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+--- !u!1001 &2045677232
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.5069869
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.8116195
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836373472681939186, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_Name
+      value: Stormtrooper (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+--- !u!1001 &2101399743
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.5375414
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.9727872
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836373472681939186, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_Name
+      value: Stormtrooper (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
 --- !u!1 &2105014039
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +1116,7 @@ MonoBehaviour:
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
---- !u!1001 &4476393103348828852
+--- !u!1001 &2109613011
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -611,71 +1124,112 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4928884685301198693, guid: e91be835ab17a3348b98438a82df766d, type: 3}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -5.062922
       objectReference: {fileID: 0}
-    - target: {fileID: 4928884685301198693, guid: e91be835ab17a3348b98438a82df766d, type: 3}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.7406512
       objectReference: {fileID: 0}
-    - target: {fileID: 5373998599394185461, guid: e91be835ab17a3348b98438a82df766d, type: 3}
-      propertyPath: moveSpeed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5373998599394185461, guid: e91be835ab17a3348b98438a82df766d, type: 3}
-      propertyPath: detectRange
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8309296973707794561, guid: e91be835ab17a3348b98438a82df766d, type: 3}
-      propertyPath: m_Name
-      value: EnemyBase
-      objectReference: {fileID: 0}
-    - target: {fileID: 8606730744969374835, guid: e91be835ab17a3348b98438a82df766d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.83
-      objectReference: {fileID: 0}
-    - target: {fileID: 8606730744969374835, guid: e91be835ab17a3348b98438a82df766d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 8606730744969374835, guid: e91be835ab17a3348b98438a82df766d, type: 3}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.040772118
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8606730744969374835, guid: e91be835ab17a3348b98438a82df766d, type: 3}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8606730744969374835, guid: e91be835ab17a3348b98438a82df766d, type: 3}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8606730744969374835, guid: e91be835ab17a3348b98438a82df766d, type: 3}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8606730744969374835, guid: e91be835ab17a3348b98438a82df766d, type: 3}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8606730744969374835, guid: e91be835ab17a3348b98438a82df766d, type: 3}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8606730744969374835, guid: e91be835ab17a3348b98438a82df766d, type: 3}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8606730744969374835, guid: e91be835ab17a3348b98438a82df766d, type: 3}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836373472681939186, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_Name
+      value: Stormtrooper (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e91be835ab17a3348b98438a82df766d, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+--- !u!1001 &6791296708012135156
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8261736
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.6746286
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4182523367518169872, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4836373472681939186, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
+      propertyPath: m_Name
+      value: Stormtrooper
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a5b89878f56c3b845b9bc663bc4706e2, type: 3}
 --- !u!1001 &7826709244007879508
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -800,7 +1354,17 @@ SceneRoots:
   m_Roots:
   - {fileID: 42476590}
   - {fileID: 9177778753944663007}
-  - {fileID: 4476393103348828852}
   - {fileID: 7826709244007879508}
   - {fileID: 1191679748}
   - {fileID: 1047857889}
+  - {fileID: 6791296708012135156}
+  - {fileID: 2101399743}
+  - {fileID: 1890105818}
+  - {fileID: 2109613011}
+  - {fileID: 1129247693}
+  - {fileID: 1031144034}
+  - {fileID: 2045677232}
+  - {fileID: 1983450865}
+  - {fileID: 1124579377}
+  - {fileID: 1780862752}
+  - {fileID: 1575638608}

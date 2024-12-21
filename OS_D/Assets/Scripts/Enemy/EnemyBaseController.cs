@@ -4,25 +4,34 @@ using Unity.Properties;
 using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
 using UnityEngine.AI;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class EnemyBaseController : MonoBehaviour
 {
+    [Header("Enemy stats")]
     [SerializeField] float moveSpeed = 3f;
+    [SerializeField] int healthPoints = 100;
+    [Header("Area sizes")]
     [SerializeField] float detectRange = 5f;
     [SerializeField] float attackRange = 5f;
     [SerializeField] float huntingRange = 10f;
-    private float prepairToAttackTime = 0.5f;
-    private float attackAnimationTime = 0f;
+    [SerializeField] float helpRange = 5f;
+    [Header("Timings")]
+    [SerializeField] float prepairToAttackTime = 0.5f;
+    [SerializeField] float attackAnimationTime = 0f;
+    [Header("Ray Mask")]
+    public LayerMask rayTargetLayer;
+    public LayerMask obstacleTargetLayer;
+
     private Rigidbody2D rb;
     private Vector2 direction = Vector2.zero;
-    private Vector2 playerPosition;
+    protected Vector2 playerPosition;
     private Vector2 selfPosition;
     private Vector2 spawnPosition;
     private Vector2 goPosition;
-    public LayerMask rayTargetLayer;
 
     private float toPlayerDistance = 0f;
-    private bool detectPlayer = false;
+    public bool detectPlayer = false;
     private bool seePlayer = false;
     public enum enemyState { Idle, PrepairToAttack, Attack, Strafe, Hunting, BackToSpawn }
     private enemyState prevEnemyState = enemyState.Idle;
@@ -41,7 +50,6 @@ public class EnemyBaseController : MonoBehaviour
     private bool isAgent = false;
     private Vector2 targetAttackPosition;
 
-    //Agent
     private Vector2 target;
     NavMeshAgent agent;
 
@@ -93,6 +101,10 @@ public class EnemyBaseController : MonoBehaviour
                     isSeriesEvent = false;
                     direction = Vector2.zero;
                 }
+                else
+                {
+                    OnFrontObstacle();
+                }
             }
         }
         else
@@ -103,9 +115,10 @@ public class EnemyBaseController : MonoBehaviour
         // Debug
         Debug.DrawRay(selfPosition, (playerPosition - selfPosition).normalized * huntingRange, Color.yellow);
         Debug.DrawRay(selfPosition, (playerPosition - selfPosition).normalized * detectRange, Color.red);
+        //Debug.DrawRay(selfPosition + (goPosition - selfPosition).normalized * 0.3f, (goPosition - selfPosition).normalized * 0.3f, Color.blue);
     }
 
-    void SetAgentPosition()
+    private void SetAgentPosition()
     {
         agent.SetDestination(new Vector3(target.x, target.y, transform.position.z));
     }
@@ -116,9 +129,10 @@ public class EnemyBaseController : MonoBehaviour
         {
             if (raycast.collider.gameObject.CompareTag("Player"))
             {
-                if (toPlayerDistance <= detectRange)
+                if (toPlayerDistance <= detectRange && !detectPlayer)
                 {
                     detectPlayer = true;
+                    CallForHelp();
                 }
                 seePlayer = true;
             }
@@ -137,7 +151,30 @@ public class EnemyBaseController : MonoBehaviour
             seePlayer = false;
         }
     }
+    private void CallForHelp()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            float distance = Vector3.Distance(enemy.transform.position, selfPosition);
+            if (distance <= helpRange)
+            {
+                Debug.Log(enemy.name);
+                enemy.GetComponent<EnemyBaseController>().detectPlayer = true;
+            }
+        }
+    }
 
+    private void OnFrontObstacle()
+    {
+        RaycastHit2D obstacle = Physics2D.Raycast(selfPosition + 0.3f * direction, direction, 0.3f, obstacleTargetLayer);
+        if (obstacle)
+        {
+            goPositionEvent = false;
+            isSeriesEvent = false;
+            direction = Vector2.zero;
+        }
+    }
     private void DefineEnemyState()
     {
         prevEnemyState = curEnemyState;
@@ -215,9 +252,9 @@ public class EnemyBaseController : MonoBehaviour
             isSeriesEvent = false;
         }
     }
-    private void Attack()
+    public virtual void Attack()
     {
-        Debug.Log("Attack");
+
     }
 
     private void Strafe()
@@ -227,10 +264,9 @@ public class EnemyBaseController : MonoBehaviour
         direction = (goPosition - selfPosition).normalized;
     }
 
-    private Vector2 GetNewStrafePosition()
+    public virtual Vector2 GetNewStrafePosition()
     {
-        Debug.Log("Определяем новую позицию");
-        return playerPosition;
+        return selfPosition;
     }
 
     private void Idle()
