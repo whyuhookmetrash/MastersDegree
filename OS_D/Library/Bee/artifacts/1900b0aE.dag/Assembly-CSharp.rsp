@@ -385,6 +385,7 @@
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Player/TestPlayerController.cs"
 "Assets/Scripts/ProceduralGenerator.cs"
+"Assets/Scripts/Projectiles/GuardianLaserController.cs"
 "Assets/Scripts/Room.cs"
 -langversion:9.0
 /deterministic

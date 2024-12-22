@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.IO.LowLevel.Unsafe;
 using Unity.Properties;
 using Unity.VisualScripting.Dependencies.Sqlite;
 using UnityEngine;
@@ -19,12 +20,14 @@ public class EnemyBaseController : MonoBehaviour
     [Header("Timings")]
     [SerializeField] float prepairToAttackTime = 0.5f;
     [SerializeField] float attackAnimationTime = 0f;
+    [SerializeField] float minCooldownAttackTime = 2f;
     [Header("Ray Mask")]
     public LayerMask rayTargetLayer;
     public LayerMask obstacleTargetLayer;
 
     private Rigidbody2D rb;
     private Vector2 direction = Vector2.zero;
+    protected Vector2 seeDirection = Vector2.right; // зарандомить
     protected Vector2 playerPosition;
     protected Vector2 selfPosition;
     private Vector2 spawnPosition;
@@ -48,7 +51,8 @@ public class EnemyBaseController : MonoBehaviour
     private bool isSeriesEvent = false;
     private bool goPositionEvent = false;
     private bool isAgent = false;
-    private Vector2 targetAttackPosition;
+    protected Vector2 targetAttackPosition;
+    private bool canAttack = true;
 
     private Vector2 target;
     NavMeshAgent agent;
@@ -64,6 +68,12 @@ public class EnemyBaseController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spawnPosition = transform.position;
+        ChildStart();
+    }
+
+    protected virtual void ChildStart()
+    {
+
     }
 
     
@@ -110,6 +120,15 @@ public class EnemyBaseController : MonoBehaviour
         else
         {
             SetAgentPosition();
+        }
+
+        if (direction != Vector2.zero)
+        {
+            seeDirection = direction.normalized;
+        }
+        if (curEnemyState == enemyState.PrepairToAttack)
+        {
+            seeDirection = (playerPosition - selfPosition).normalized;
         }
 
         // Debug
@@ -159,7 +178,6 @@ public class EnemyBaseController : MonoBehaviour
             float distance = Vector3.Distance(enemy.transform.position, selfPosition);
             if (distance <= helpRange)
             {
-                Debug.Log(enemy.name);
                 enemy.GetComponent<EnemyBaseController>().detectPlayer = true;
             }
         }
@@ -220,7 +238,18 @@ public class EnemyBaseController : MonoBehaviour
         if (curEnemyState == enemyState.PrepairToAttack)
         {
             OnPreviousPathFinding();
-            StartCoroutine(PrepairToAttack());
+            if (canAttack)
+            {
+                StartCoroutine(PrepairToAttack());
+                StartCoroutine(StartAttackCooldown());
+            }
+            else
+            {
+                isSeriesEvent = true;
+                direction = Vector2.zero;
+                curEnemyState = enemyState.Strafe;
+                Strafe();
+            }
         }
     }
 
@@ -252,7 +281,13 @@ public class EnemyBaseController : MonoBehaviour
             isSeriesEvent = false;
         }
     }
-    public virtual void Attack()
+    private IEnumerator StartAttackCooldown()
+    {
+        canAttack = false;
+        yield return new WaitForSeconds(minCooldownAttackTime);
+        canAttack = true;
+    }
+    protected virtual void Attack()
     {
 
     }
@@ -264,7 +299,7 @@ public class EnemyBaseController : MonoBehaviour
         direction = (goPosition - selfPosition).normalized;
     }
 
-    public virtual Vector2 GetNewStrafePosition()
+    protected virtual Vector2 GetNewStrafePosition()
     {
         return selfPosition;
     }

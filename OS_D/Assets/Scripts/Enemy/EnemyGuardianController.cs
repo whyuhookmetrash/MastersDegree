@@ -7,34 +7,47 @@ public class EnemyGuardianController : EnemyBaseController
     [Header("Strafe area sizes")]
     [SerializeField] float maxStep = 2f;
     [SerializeField] float dangerousRange = 5f;
-    [SerializeField] float safeRange = 7f;
-    [SerializeField] float afkRange = 10f;
-    public override Vector2 GetNewStrafePosition()
+    [SerializeField] float strafeRange = 7f;
+    [SerializeField] float safeRange = 10f;
+    [Header("Projectiles")]
+    public GameObject laserProjectile;
+
+    private int prevK;
+
+    protected override void ChildStart()
+    {
+        prevK = Random.Range(0, 2);
+    }
+    protected override void Attack()
+    {
+        targetAttackPosition = playerPosition;
+        GameObject laser = Instantiate(laserProjectile, selfPosition + seeDirection * 0.3f, Quaternion.identity);
+        laser.GetComponent<GuardianLaserController>().direction = (targetAttackPosition - selfPosition).normalized;
+    }
+    protected override Vector2 GetNewStrafePosition()
     {
         if (toPlayerDistance <= dangerousRange)
         {
             return OnDangerousZone();
         }
-        else if (toPlayerDistance <= safeRange)
+        else if (toPlayerDistance <= strafeRange)
         {
-            return OnSafeZone();
+            return OnStrafeZone();
         }
         else
         {
             return selfPosition;
         }
     }
-
-    public override void Attack()
-    {
-        Debug.Log("Attack");
-    }
-
-    private Vector2 OnSafeZone()
+    private Vector2 OnStrafeZone()
     {
         Vector2 leftCirclePosition = playerPosition + RotateVector(selfPosition - playerPosition, -15f).normalized * toPlayerDistance;
         Vector2 rightCirclePosition = playerPosition + RotateVector(selfPosition - playerPosition, 15f).normalized * toPlayerDistance;
         int k = Random.Range(0, 2);
+
+        if (Random.Range(0, 2) == 0) { k = prevK; }
+        else { prevK = k; }
+
         if (k == 0)
         {
             if (!OnObstacle(leftCirclePosition))
@@ -77,7 +90,7 @@ public class EnemyGuardianController : EnemyBaseController
         }
         if (k != 13)
         {
-            return circlePosition;
+            return NormalizePosition(circlePosition);
         }
         else
         {

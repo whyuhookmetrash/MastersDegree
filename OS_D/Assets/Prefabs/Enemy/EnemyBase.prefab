@@ -202,6 +202,7 @@ MonoBehaviour:
   helpRange: 5
   prepairToAttackTime: 0.5
   attackAnimationTime: 0
+  minCooldownAttackTime: 2
   rayTargetLayer:
     serializedVersion: 2
     m_Bits: 768

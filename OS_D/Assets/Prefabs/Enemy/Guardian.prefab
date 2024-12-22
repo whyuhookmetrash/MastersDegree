@@ -132,14 +132,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc4e9240fac87c841b53b82eff1dff12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 2
   healthPoints: 100
   detectRange: 5
   attackRange: 10
   huntingRange: 20
   helpRange: 5
   prepairToAttackTime: 0.5
-  attackAnimationTime: 0
+  attackAnimationTime: 0.25
+  minCooldownAttackTime: 2
   rayTargetLayer:
     serializedVersion: 2
     m_Bits: 768
@@ -147,10 +148,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 640
   detectPlayer: 0
-  maxStep: 2
+  maxStep: 3
   dangerousRange: 5
+  strafeRange: 7
   safeRange: 10
-  afkRange: 10
+  laserProjectile: {fileID: 8193691814749801362, guid: 4b1e5cb8520e40746b1c18d6c24214f2, type: 3}
 --- !u!58 &3321867449505198571
 CircleCollider2D:
   m_ObjectHideFlags: 0
