@@ -27,7 +27,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1.6746286}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.48615965, y: 0.48615965, z: 0.48615965}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4182523367518169872}
@@ -114,7 +114,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1695825988055459938}
@@ -148,9 +148,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 640
   detectPlayer: 0
-  maxStep: 3
+  _curEnemyState: 0
+  maxStep: 2
   dangerousRange: 5
-  strafeRange: 7
+  strafeRange: 8
   safeRange: 10
   laserProjectile: {fileID: 8193691814749801362, guid: 4b1e5cb8520e40746b1c18d6c24214f2, type: 3}
 --- !u!58 &3321867449505198571
@@ -187,7 +188,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.25
 --- !u!50 &2605307233527534101
 Rigidbody2D:
   serializedVersion: 4
@@ -204,7 +205,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d4bc42594a2336e428c0c24e3e7241f6, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -214,7 +215,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!195 &-4193177913238144913
 NavMeshAgent:
   m_ObjectHideFlags: 0

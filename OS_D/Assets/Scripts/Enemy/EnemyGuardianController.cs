@@ -21,7 +21,7 @@ public class EnemyGuardianController : EnemyBaseController
     protected override void Attack()
     {
         targetAttackPosition = playerPosition;
-        GameObject laser = Instantiate(laserProjectile, selfPosition + seeDirection * 0.3f, Quaternion.identity);
+        GameObject laser = Instantiate(laserProjectile, selfPosition + seeDirection * 0.25f, Quaternion.identity);
         laser.GetComponent<GuardianLaserController>().direction = (targetAttackPosition - selfPosition).normalized;
     }
     protected override Vector2 GetNewStrafePosition()

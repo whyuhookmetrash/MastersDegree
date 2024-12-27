@@ -38,7 +38,7 @@ public class EnemyBaseController : MonoBehaviour
     private bool seePlayer = false;
     public enum enemyState { Idle, PrepairToAttack, Attack, Strafe, Hunting, BackToSpawn }
     private enemyState prevEnemyState = enemyState.Idle;
-    private enemyState _curEnemyState = enemyState.Idle;
+    [SerializeField] enemyState _curEnemyState = enemyState.Idle;
     public enemyState curEnemyState
     {
         get {return _curEnemyState;}
@@ -185,7 +185,7 @@ public class EnemyBaseController : MonoBehaviour
 
     private void OnFrontObstacle()
     {
-        RaycastHit2D obstacle = Physics2D.Raycast(selfPosition + 0.3f * direction, direction, 0.3f, obstacleTargetLayer);
+        RaycastHit2D obstacle = Physics2D.Raycast(selfPosition + 0.26f * direction, direction, 0.1f, obstacleTargetLayer);
         if (obstacle)
         {
             goPositionEvent = false;
@@ -209,12 +209,13 @@ public class EnemyBaseController : MonoBehaviour
         }
         else
         {
-            if (selfPosition != spawnPosition)
+            if (Vector2.Distance(selfPosition, spawnPosition) > moveSpeed * Time.deltaTime)
             {
                 curEnemyState = enemyState.BackToSpawn;
             }
             else
             {
+                selfPosition = spawnPosition;
                 curEnemyState = enemyState.Idle;
             }
         }
