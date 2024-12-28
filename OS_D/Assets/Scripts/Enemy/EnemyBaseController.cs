@@ -38,7 +38,7 @@ public class EnemyBaseController : MonoBehaviour
     private bool seePlayer = false;
     public enum enemyState { Idle, PrepairToAttack, Attack, Strafe, Hunting, BackToSpawn }
     private enemyState prevEnemyState = enemyState.Idle;
-    [SerializeField] enemyState _curEnemyState = enemyState.Idle;
+    public enemyState _curEnemyState = enemyState.Idle;
     public enemyState curEnemyState
     {
         get {return _curEnemyState;}
@@ -81,7 +81,7 @@ public class EnemyBaseController : MonoBehaviour
     {
         
     }
-
+    // объект двигают сразу 2 класса: agent и rigidbody. При задействии одного, другой нужно отключать
     private void FixedUpdate()
     {
         playerPosition = GameManager.Instance.playerTransform.position;
@@ -101,6 +101,7 @@ public class EnemyBaseController : MonoBehaviour
         {
             float step = moveSpeed * Time.fixedDeltaTime;
             rb.MovePosition(rb.position + direction * step);
+            //rb.velocity = Vector2.zero; //вместо того который в Strafe
             if (goPositionEvent)
             {
                 direction = (goPosition - selfPosition).normalized;
@@ -119,6 +120,7 @@ public class EnemyBaseController : MonoBehaviour
         }
         else
         {
+            rb.velocity = Vector2.zero;
             SetAgentPosition();
         }
 
@@ -132,8 +134,8 @@ public class EnemyBaseController : MonoBehaviour
         }
 
         // Debug
-        Debug.DrawRay(selfPosition, (playerPosition - selfPosition).normalized * huntingRange, Color.yellow);
-        Debug.DrawRay(selfPosition, (playerPosition - selfPosition).normalized * detectRange, Color.red);
+        //Debug.DrawRay(selfPosition, (playerPosition - selfPosition).normalized * huntingRange, Color.yellow);
+        //Debug.DrawRay(selfPosition, (playerPosition - selfPosition).normalized * detectRange, Color.red);
         //Debug.DrawRay(selfPosition + (goPosition - selfPosition).normalized * 0.3f, (goPosition - selfPosition).normalized * 0.3f, Color.blue);
     }
 
@@ -242,7 +244,10 @@ public class EnemyBaseController : MonoBehaviour
             if (canAttack)
             {
                 StartCoroutine(PrepairToAttack());
-                StartCoroutine(StartAttackCooldown());
+                if (minCooldownAttackTime > 0)
+                {
+                    StartCoroutine(StartAttackCooldown());
+                }
             }
             else
             {
@@ -296,6 +301,7 @@ public class EnemyBaseController : MonoBehaviour
     private void Strafe()
     {
         goPositionEvent = true;
+        rb.velocity = Vector2.zero;
         goPosition = GetNewStrafePosition();
         direction = (goPosition - selfPosition).normalized;
     }

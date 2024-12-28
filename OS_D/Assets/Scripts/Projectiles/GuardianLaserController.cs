@@ -6,6 +6,7 @@ public class GuardianLaserController : MonoBehaviour
 {
     [Header("Laser stats")]
     [SerializeField] float moveSpeed = 10f;
+    [SerializeField] int damage = 10;
     [SerializeField] float maxDistance = 25f;
 
     public Vector2 direction;
@@ -32,7 +33,7 @@ public class GuardianLaserController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Получен урон");
+            GameManager.Instance.DealDamageToPlayer(damage);
         }
         OnSelfDestroy();
     }

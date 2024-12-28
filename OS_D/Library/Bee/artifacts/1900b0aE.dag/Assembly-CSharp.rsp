@@ -382,6 +382,7 @@
 "Assets/Scripts/Coridor.cs"
 "Assets/Scripts/Enemy/EnemyBaseController.cs"
 "Assets/Scripts/Enemy/EnemyGuardianController.cs"
+"Assets/Scripts/Enemy/EnemyStormtrooperController.cs"
 "Assets/Scripts/Furniture.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Player/PlayerController.cs"
