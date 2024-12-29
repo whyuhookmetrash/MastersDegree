@@ -37,17 +37,16 @@ public class Actor : MonoBehaviour, IDamageTaker
         {
             netDamage = ConvertMagicalDamage(netDamage / 2) + ConvertPhysicalDamage(netDamage / 2);
         }
-        Debug.Log(netDamage);
         return netDamage + ConvertMagicalDamage(damage.addMagicalDamage) + ConvertPhysicalDamage(damage.addPhysicalDamage);
     }
 
     private int ConvertPhysicalDamage(int damage)
     {
-        return (int)(damage * (1 - 1 / (1 + physicalResistance / 50f)));
+        return (int)(damage * (1 / (1 + physicalResistance / 50f)));
     }
     private int ConvertMagicalDamage(int damage)
     {
-        return (int)(damage * (1 - 1 / (1 + magicalResistance / 50f)));
+        return (int)(damage * (1 / (1 + magicalResistance / 50f)));
     }
 
     protected virtual void OnActorDeath()

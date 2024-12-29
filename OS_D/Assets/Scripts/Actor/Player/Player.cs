@@ -27,9 +27,4 @@ public class Player : Actor
     {
         rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
     }
-
-    protected override void OnActorDeath()
-    {
-        //Debug.Log("PlayerDeath");
-    }
 }
