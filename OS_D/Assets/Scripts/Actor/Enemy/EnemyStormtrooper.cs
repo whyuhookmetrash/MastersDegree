@@ -5,12 +5,11 @@ using UnityEngine;
 public class EnemyStormtrooper : EnemyBase
 {
     [Header("Close Combat")]
-    [SerializeField] int damage = 10;
     [SerializeField] float closeCombatRange = 2f;
     protected override void Attack()
     {
         if (toPlayerDistance <= closeCombatRange) {
-            GameManager.Instance.DealDamageToPlayer(damage);
+            //GameManager.Instance.DealDamageToPlayer(damage);
         }
     }
 }

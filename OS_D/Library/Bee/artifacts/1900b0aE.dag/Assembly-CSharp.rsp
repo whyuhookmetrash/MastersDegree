@@ -392,6 +392,7 @@
 "Assets/Scripts/GameManager/GameManager.cs"
 "Assets/Scripts/ProceduralGenerator.cs"
 "Assets/Scripts/Projectiles/GuardianLaser.cs"
+"Assets/Scripts/Projectiles/ProjectileBase.cs"
 "Assets/Scripts/Room.cs"
 -langversion:9.0
 /deterministic

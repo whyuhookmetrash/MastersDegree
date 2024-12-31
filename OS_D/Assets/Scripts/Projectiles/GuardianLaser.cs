@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GuardianLaser : MonoBehaviour
+public class GuardianLaser : ProjectileBase
 {
     [Header("Laser stats")]
     [SerializeField] float moveSpeed = 10f;
-    [SerializeField] int damage = 10;
     [SerializeField] float maxDistance = 25f;
 
     public Vector2 direction;
     private float distance = 0f;
-    void Start()
+ 
+    protected override void ChildStart()
     {
         float angle = Vector2.SignedAngle(Vector2.right, direction.normalized);
         transform.Rotate(0, 0, angle);
@@ -29,17 +29,4 @@ public class GuardianLaser : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            GameManager.Instance.DealDamageToPlayer(damage);
-        }
-        OnSelfDestroy();
-    }
-
-    private void OnSelfDestroy()
-    {
-        Destroy(gameObject);
-    }
 }

@@ -90,8 +90,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc4e9240fac87c841b53b82eff1dff12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHP: 100
+  currentHP: 0
+  physicalResistance: 10
+  magicalResistance: 10
+  evasion: 0
   moveSpeed: 2
-  healthPoints: 100
+  damageValue: 10
+  damageType: 0
   detectRange: 10
   attackRange: 10
   huntingRange: 20
@@ -106,7 +112,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 640
   detectPlayer: 0
-  _curEnemyState: 0
   maxStep: 2
   dangerousRange: 5
   strafeRange: 10

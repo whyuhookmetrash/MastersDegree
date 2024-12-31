@@ -5,7 +5,8 @@ using UnityEngine.AI;
 public class EnemyBase : Actor
 {
     [Header("Enemy stats")]
-    [SerializeField] float moveSpeed = 3f;
+    [SerializeField] int damageValue = 0;
+    [SerializeField] DamageType damageType = DamageType.Net;
     [Header("Area sizes")]
     [SerializeField] float detectRange = 5f;
     [SerializeField] float attackRange = 5f;
@@ -62,6 +63,8 @@ public class EnemyBase : Actor
     {
         rb = GetComponent<Rigidbody2D>();
         spawnPosition = transform.position;
+        currentDamageInfo.damageValue = damageValue;
+        currentDamageInfo.damageType = damageType;
         ChildStart();
     }
 
@@ -69,6 +72,7 @@ public class EnemyBase : Actor
     {
 
     }
+
     void Update()
     {
         

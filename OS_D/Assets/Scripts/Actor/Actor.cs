@@ -7,22 +7,32 @@ using UnityEngine;
 public class Actor : MonoBehaviour, IDamageTaker
 {
     [Header("Actor stats")]
-    [SerializeField] int healthPoints = 100;
+    [SerializeField] int maxHP = 100;
+    public int currentHP;
     [SerializeField] int physicalResistance = 10;
     [SerializeField] int magicalResistance = 10;
+    [SerializeField] int evasion = 0;
+    [SerializeField] public float moveSpeed = 3f;
+    public DamageInfo currentDamageInfo = new DamageInfo();
+    //Modifiers
+
+    void Start()
+    {
+        currentHP = maxHP;
+    }
 
     public void TakeDamage(DamageInfo damage)
     {
-        int netDamage = ConvertDamage(damage);
-        healthPoints = healthPoints - netDamage;
-        Debug.Log(healthPoints);
-        if (healthPoints <= 0)
+        int netDamage = CalculateDamage(damage);
+        currentHP = currentHP - netDamage;
+        Debug.Log(currentHP);
+        if (currentHP <= 0)
         {
-            OnActorDeath();
+            OnDeath();
         }
     }
 
-    public int ConvertDamage(DamageInfo damage)
+    private int CalculateDamage(DamageInfo damage)
     {
         int netDamage = damage.damageValue;
         if (damage.damageType == DamageType.Physical)
@@ -49,7 +59,7 @@ public class Actor : MonoBehaviour, IDamageTaker
         return (int)(damage * (1 / (1 + magicalResistance / 50f)));
     }
 
-    protected virtual void OnActorDeath()
+    protected virtual void OnDeath()
     {
 
     }
