@@ -18,11 +18,11 @@ TagManager:
   - Player
   - Wall
   - EnemyBreakableProjectiles
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PlayerBreakableProjectiles
+  - BreakableProjectiles
+  - EnemyHitBox
+  - PlayerHitBox
+  - PlayerCloseCombat
   - 
   - 
   - 

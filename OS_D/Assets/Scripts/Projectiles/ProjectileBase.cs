@@ -7,9 +7,25 @@ public class ProjectileBase : MonoBehaviour
     public Actor owner;
     private DamageInfo projectileDamage;
 
+    public Vector2 direction;
+    private int countThroughShoot = 1;
+
     void Start()
     {
+        countThroughShoot = owner.countThroughShoot;
         projectileDamage = owner.currentDamageInfo;
+        if (owner.gameObject.CompareTag("Player"))
+        {
+            gameObject.layer = LayerMask.NameToLayer("PlayerBreakableProjectiles");
+        }
+        else if (owner.gameObject.CompareTag("Enemy"))
+        {
+            gameObject.layer = LayerMask.NameToLayer("EnemyBreakableProjectiles");
+        }
+        else
+        {
+            gameObject.layer = LayerMask.NameToLayer("BreakableProjectiles");
+        }
         ChildStart();
     }
 
@@ -24,8 +40,16 @@ public class ProjectileBase : MonoBehaviour
         if (actor != null)
         {
             actor.TakeDamage(projectileDamage);
+            countThroughShoot--;
         }
-        OnSelfDestroy();
+        else
+        {
+            OnSelfDestroy();
+        }
+        if (countThroughShoot <= 0)
+        {
+            OnSelfDestroy();
+        }
     }
     protected virtual void OnSelfDestroy()
     {

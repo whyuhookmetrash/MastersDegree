@@ -116,4 +116,4 @@ MonoBehaviour:
   dangerousRange: 5
   strafeRange: 10
   safeRange: 10
-  laserProjectile: {fileID: 8193691814749801362, guid: 4b1e5cb8520e40746b1c18d6c24214f2, type: 3}
+  laserProjectile: {fileID: 2973245115700450076, guid: 71aecbae798210e4daa0d9e5d9d475a4, type: 3}

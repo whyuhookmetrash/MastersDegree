@@ -5,3 +5,9 @@ public enum DamageType
     Mixed = 2,
     Net = 4
 }
+
+public enum WeaponType
+{
+    MELEE = 0,
+    RANGE = 1
+}

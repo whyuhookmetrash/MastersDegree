@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.IO.LowLevel.Unsafe;
 using UnityEngine;
 
 
@@ -14,9 +13,10 @@ public class Actor : MonoBehaviour, IDamageTaker
     [SerializeField] int evasion = 0;
     [SerializeField] public float moveSpeed = 3f;
     public DamageInfo currentDamageInfo = new DamageInfo();
+    [SerializeField] public int countThroughShoot = 1;
     //Modifiers
 
-    void Start()
+    protected virtual void Start()
     {
         currentHP = maxHP;
     }

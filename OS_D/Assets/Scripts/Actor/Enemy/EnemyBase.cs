@@ -59,8 +59,9 @@ public class EnemyBase : Actor
         agent.updateUpAxis = false;
         agent.speed = moveSpeed;
     }
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         rb = GetComponent<Rigidbody2D>();
         spawnPosition = transform.position;
         currentDamageInfo.damageValue = damageValue;
@@ -97,7 +98,7 @@ public class EnemyBase : Actor
         {
             float step = moveSpeed * Time.fixedDeltaTime;
             rb.MovePosition(rb.position + direction * step);
-            //rb.velocity = Vector2.zero; //вместо того который в Strafe
+            rb.velocity = Vector2.zero; //вместо того который в Strafe
             if (goPositionEvent)
             {
                 direction = (goPosition - selfPosition).normalized;
