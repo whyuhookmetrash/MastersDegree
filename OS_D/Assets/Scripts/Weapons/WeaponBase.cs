@@ -12,11 +12,20 @@ public class WeaponBase : MonoBehaviour
     private bool canAttack = true;
     public GameObject shootMark;
     protected Vector2 direction;
-    //Modifiers
+    private List<IModifier> weaponModifiers = new List<IModifier>();
+
+    protected virtual void Awake()
+    {
+        //test
+        IModifier mod1 = new Modifiers.MaxHP(100);
+        weaponModifiers.Add(mod1);
+        IModifier mod2 = new Modifiers.DamageValue(100);
+        weaponModifiers.Add(mod2);
+    }
 
     protected virtual void Start()
     {
-        
+
     }
     
     void Update()
@@ -67,13 +76,18 @@ public class WeaponBase : MonoBehaviour
     public void OnWeaponEquip(Player player)
     {
         owner = player;
-        //onwer+modifiers
-
+        foreach (var mod in weaponModifiers)
+        {
+            owner.SetModifier(mod);
+        }
     }
 
     public void OnWeaponRemove()
     {
-        //owner-modifiers
+        foreach (var mod in weaponModifiers)
+        {
+            owner.RemoveModifier(mod);
+        }
         owner = null;
     }
 }

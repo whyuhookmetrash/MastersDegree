@@ -385,6 +385,7 @@
 "Assets/Scripts/Actor/Enemy/EnemyStormtrooper.cs"
 "Assets/Scripts/Actor/HitBox.cs"
 "Assets/Scripts/Actor/IDamageTaker.cs"
+"Assets/Scripts/Actor/Modifiers.cs"
 "Assets/Scripts/Actor/Player/Player.cs"
 "Assets/Scripts/Camera/MainCamera.cs"
 "Assets/Scripts/Enums/Enums.cs"

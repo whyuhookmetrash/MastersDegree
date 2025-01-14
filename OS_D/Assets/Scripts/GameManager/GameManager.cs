@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,6 +25,12 @@ public class GameManager : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
         playerTransform = GameObject.FindWithTag("Player").transform;
+
+        // test
+        //IModifier mod = new Modifiers.MaxHP(5);
+        //player.SetModifier(mod);
+        //player.RemoveModifier(mod);
+
     }
 
     public void DealDamageToPlayer(int value) //test

@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ using UnityEngine;
 public class Actor : MonoBehaviour, IDamageTaker
 {
     [Header("Actor stats")]
-    [SerializeField] int maxHP = 100;
+    [SerializeField] public int maxHP = 100;
     public int currentHP;
     [SerializeField] int physicalResistance = 10;
     [SerializeField] int magicalResistance = 10;
@@ -14,7 +15,7 @@ public class Actor : MonoBehaviour, IDamageTaker
     [SerializeField] public float moveSpeed = 3f;
     public DamageInfo currentDamageInfo = new DamageInfo();
     [SerializeField] public int countThroughShoot = 1;
-    //Modifiers
+    private List<IModifier> modifiers = new List<IModifier>();
 
     protected virtual void Start()
     {
@@ -62,5 +63,30 @@ public class Actor : MonoBehaviour, IDamageTaker
     protected virtual void OnDeath()
     {
 
+    }
+
+    public void SetModifier(IModifier modifier, bool isTemporary = false, float actionTime = 0f)
+    {
+        modifiers.Add(modifier);
+        modifier.SetModifier(this);
+        if (isTemporary)
+        {
+            StartCoroutine(StartModifierCooldown(actionTime, modifier));
+        }
+    }
+
+    public void RemoveModifier(IModifier modifier)
+    {
+        if (modifiers.Contains(modifier))
+        {
+            modifiers.Remove(modifier);
+            modifier.RemoveModifier(this);
+        }
+    }
+
+    private IEnumerator StartModifierCooldown(float seconds, IModifier modifier)
+    {
+        yield return new WaitForSeconds(seconds);
+        RemoveModifier(modifier);
     }
 }
