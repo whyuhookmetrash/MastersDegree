@@ -13,7 +13,9 @@ public class Player : Actor
         rb = GetComponent<Rigidbody2D>();
         if (equipedWeapon != null)
         {
-            OnWeaponEquip(equipedWeapon);
+            GameObject newWeapon = Instantiate(equipedWeapon, transform.position, Quaternion.identity);
+            newWeapon.gameObject.GetComponent<WeaponBase>().OnWeaponEquip(this);
+            equipedWeapon = newWeapon;
         }
     }
 
@@ -26,11 +28,15 @@ public class Player : Actor
 
     private void FixedUpdate()
     {
-        rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + direction * moveSpeed * Mathf.Max(0, 1-b_freezeSpeed) * Time.fixedDeltaTime);
     }
 
-    private void OnWeaponEquip(GameObject weapon)
+    public void EquipWeapon(GameObject weapon)
     {
+        if (equipedWeapon != null)
+        {
+            equipedWeapon.gameObject.GetComponent<WeaponBase>().OnWeaponRemove();
+        }
         GameObject newWeapon = Instantiate(weapon, transform.position, Quaternion.identity);
         newWeapon.gameObject.GetComponent<WeaponBase>().OnWeaponEquip(this);
         equipedWeapon = newWeapon;

@@ -12,15 +12,11 @@ public class WeaponBase : MonoBehaviour
     private bool canAttack = true;
     public GameObject shootMark;
     protected Vector2 direction;
-    private List<IModifier> weaponModifiers = new List<IModifier>();
+    protected List<IModifier> weaponModifiers = new List<IModifier>();
 
     protected virtual void Awake()
     {
-        //test
-        IModifier mod1 = new Modifiers.MaxHP(100);
-        weaponModifiers.Add(mod1);
-        IModifier mod2 = new Modifiers.DamageValue(100);
-        weaponModifiers.Add(mod2);
+
     }
 
     protected virtual void Start()
@@ -39,7 +35,7 @@ public class WeaponBase : MonoBehaviour
                 Attack();
                 if (weaponType == WeaponType.MELEE)
                 {
-                    StartCoroutine(StartAttackAnimation());
+                    owner.SetModifier(new Modifiers.FreezeSpeed(), true, attackAnimationTime);
                 }
                 StartCoroutine(StartAttackCooldown());
             }
@@ -56,13 +52,6 @@ public class WeaponBase : MonoBehaviour
         canAttack = false;
         yield return new WaitForSeconds(attackCooldownTime);
         canAttack = true;
-    }
-
-    private IEnumerator StartAttackAnimation()
-    {
-        owner.moveSpeed = 0;
-        yield return new WaitForSeconds(attackAnimationTime);
-        owner.moveSpeed = 7f; //исправить
     }
 
     private void RotateWeapon()

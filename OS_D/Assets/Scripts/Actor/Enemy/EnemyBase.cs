@@ -57,7 +57,7 @@ public class EnemyBase : Actor
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-        agent.speed = moveSpeed;
+        agent.speed = _moveSpeed;
     }
     protected override void Start()
     {
@@ -76,7 +76,7 @@ public class EnemyBase : Actor
 
     void Update()
     {
-        
+ 
     }
     // объект двигают сразу 2 класса: agent и rigidbody. При задействии одного, другой нужно отключать
     private void FixedUpdate()

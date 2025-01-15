@@ -71,14 +71,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8309296973707794561, guid: e91be835ab17a3348b98438a82df766d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -4558074868187788936}
+      addedObject: {fileID: 6275284147427268507}
   m_SourcePrefab: {fileID: 100100000, guid: e91be835ab17a3348b98438a82df766d, type: 3}
 --- !u!1 &2990143853959314978 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8309296973707794561, guid: e91be835ab17a3348b98438a82df766d, type: 3}
   m_PrefabInstance: {fileID: 6498573782315902627}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-4558074868187788936
+--- !u!114 &6275284147427268507
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2990143853959314978}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc4e9240fac87c841b53b82eff1dff12, type: 3}
+  m_Script: {fileID: 11500000, guid: 2caace8406d5cf843b39d223320ce15b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
@@ -95,7 +95,9 @@ MonoBehaviour:
   physicalResistance: 10
   magicalResistance: 10
   evasion: 0
-  moveSpeed: 2
+  _moveSpeed: 3
+  countThroughShoot: 1
+  b_freezeSpeed: 0
   damageValue: 10
   damageType: 0
   detectRange: 10
@@ -116,4 +118,4 @@ MonoBehaviour:
   dangerousRange: 5
   strafeRange: 10
   safeRange: 10
-  laserProjectile: {fileID: 2973245115700450076, guid: 71aecbae798210e4daa0d9e5d9d475a4, type: 3}
+  projectilePrefab: {fileID: 2973245115700450076, guid: 71aecbae798210e4daa0d9e5d9d475a4, type: 3}

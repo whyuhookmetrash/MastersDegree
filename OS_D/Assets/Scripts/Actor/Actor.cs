@@ -1,6 +1,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -12,10 +13,17 @@ public class Actor : MonoBehaviour, IDamageTaker
     [SerializeField] int physicalResistance = 10;
     [SerializeField] int magicalResistance = 10;
     [SerializeField] int evasion = 0;
-    [SerializeField] public float moveSpeed = 3f;
+    [SerializeField] public float _moveSpeed = 3f;
     public DamageInfo currentDamageInfo = new DamageInfo();
     [SerializeField] public int countThroughShoot = 1;
     private List<IModifier> modifiers = new List<IModifier>();
+    public int b_freezeSpeed = 0;
+
+    public float moveSpeed
+    {
+        get { return _moveSpeed * Mathf.Max(0, 1 - b_freezeSpeed); }
+        set { _moveSpeed = value; }
+    }
 
     protected virtual void Start()
     {
@@ -25,12 +33,13 @@ public class Actor : MonoBehaviour, IDamageTaker
     public void TakeDamage(DamageInfo damage)
     {
         int netDamage = CalculateDamage(damage);
-        currentHP = currentHP - netDamage;
-        Debug.Log(currentHP);
-        if (currentHP <= 0)
-        {
-            OnDeath();
-        }
+        TakeHP(-netDamage);
+    }
+
+    public void TakeHP(int healthPoints)
+    {
+        currentHP = Mathf.Min(currentHP + healthPoints, maxHP);
+        if (currentHP <= 0) { OnDeath(); }
     }
 
     private int CalculateDamage(DamageInfo damage)

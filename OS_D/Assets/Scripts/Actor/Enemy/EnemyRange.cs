@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyGuardian : EnemyBase
+public class EnemyRange : EnemyBase
 {
-    [Header("Strafe area sizes")]
+    [Header("Strafe settings")]
     [SerializeField] float maxStep = 2f;
     [SerializeField] float dangerousRange = 5f;
     [SerializeField] float strafeRange = 7f;
     [SerializeField] float safeRange = 10f;
-    [Header("Projectiles")]
-    public GameObject laserProjectile;
 
     private int prevK;
 
@@ -18,13 +16,7 @@ public class EnemyGuardian : EnemyBase
     {
         prevK = Random.Range(0, 2);
     }
-    protected override void Attack()
-    {
-        targetAttackPosition = playerPosition;
-        GameObject laser = Instantiate(laserProjectile, selfPosition + seeDirection * 0.25f, Quaternion.identity);
-        laser.GetComponent<ProjectileBase>().direction = (targetAttackPosition - selfPosition).normalized;
-        laser.GetComponent<ProjectileBase>().owner = this;
-    }
+    
     protected override Vector2 GetNewStrafePosition()
     {
         if (toPlayerDistance <= dangerousRange)

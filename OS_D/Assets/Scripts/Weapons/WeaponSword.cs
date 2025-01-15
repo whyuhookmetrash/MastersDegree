@@ -8,6 +8,11 @@ public class WeaponSword : WeaponBase
     public GameObject closeCombatArea;
     private AreaTrigger closeCombatTrigger;
 
+    protected override void Awake()
+    {
+        weaponModifiers.Add(new Modifiers.DamageValue(100));
+        weaponModifiers.Add(new Modifiers.DamageType(DamageType.Physical));
+    }
     protected override void Start()
     {
         base.Start();
