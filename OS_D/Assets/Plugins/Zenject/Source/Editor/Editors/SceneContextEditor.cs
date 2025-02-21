@@ -12,6 +12,7 @@ namespace Zenject
         SerializedProperty _contractNameProperty;
         SerializedProperty _parentNamesProperty;
         SerializedProperty _parentNewObjectsUnderSceneContextProperty;
+        SerializedProperty _kernel;
 
         public override void OnEnable()
         {
@@ -20,6 +21,7 @@ namespace Zenject
             _contractNameProperty = serializedObject.FindProperty("_contractNames");
             _parentNamesProperty = serializedObject.FindProperty("_parentContractNames");
             _parentNewObjectsUnderSceneContextProperty = serializedObject.FindProperty("_parentNewObjectsUnderSceneContext");
+            _kernel = serializedObject.FindProperty("_kernel");
         }
 
         protected override void OnGui()
@@ -29,6 +31,7 @@ namespace Zenject
             EditorGUILayout.PropertyField(_contractNameProperty, true);
             EditorGUILayout.PropertyField(_parentNamesProperty, true);
             EditorGUILayout.PropertyField(_parentNewObjectsUnderSceneContextProperty);
+            EditorGUILayout.PropertyField(_kernel);
         }
     }
 }

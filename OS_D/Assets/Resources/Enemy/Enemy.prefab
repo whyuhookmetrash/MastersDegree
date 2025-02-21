@@ -188,6 +188,8 @@ GameObject:
   - component: {fileID: 1019731343784683440}
   - component: {fileID: 5128899631486207184}
   - component: {fileID: 541144515922332106}
+  - component: {fileID: 5679022493591786746}
+  - component: {fileID: 259313046726431034}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -264,7 +266,7 @@ MonoBehaviour:
   - {fileID: 1019731343784683440}
   _installerPrefabs: []
   _autoRun: 1
-  _kernel: {fileID: 0}
+  _kernel: {fileID: 259313046726431034}
 --- !u!114 &1019731343784683440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,7 +294,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -325,3 +327,27 @@ MonoBehaviour:
   countThroughShoot: 1
   b_freezeSpeed: 0
   velocity: {x: 0, y: 0}
+--- !u!114 &5679022493591786746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8859082339480501938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec6ff75339573a45b7726e823387d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &259313046726431034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8859082339480501938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8000e9598e262f743b3354474daf60a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

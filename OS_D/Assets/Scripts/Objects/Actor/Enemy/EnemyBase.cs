@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.Enemy
 {
-    public class EnemyBase : Actor
+    public class EnemyBase : Actor, IGameFixedTickable
     {
         private Rigidbody2D rb;
 
@@ -15,9 +15,9 @@ namespace Game.Enemy
             this.rb = GetComponent<Rigidbody2D>();
         }
 
-        private void FixedUpdate()
+        public virtual void FixedTick(float deltaTime)
         {
-            this.rb.MovePosition(this.rb.position + this.velocity * Time.fixedDeltaTime);
+            this.rb.MovePosition(this.rb.position + this.velocity * deltaTime);
         }
 
 

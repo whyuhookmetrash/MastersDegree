@@ -12,14 +12,16 @@ namespace Game
         private readonly Vector3 cameraOffset = new Vector3(0, 0, 10);
         public override void InstallBindings()
         {
-            
+          
             Container
-                .BindInterfacesTo<MoveInput>() //TODO: Разобраться снова в биндингах
+                .BindInterfacesTo<MoveInput>()
                 .AsSingle();
 
             Container
                 .BindInterfacesTo<MoveController>() //TODO: Разобраться почему спавнится без NonLazy
-                .AsSingle();
+                .AsSingle(); // Заменить на AsCached если будут проблемы
+                //.NonLazy();
+
 
             Container
                 .Bind<IEnemyFactory>()
@@ -30,6 +32,14 @@ namespace Game
                 .BindInterfacesTo<CameraFollower>()
                 .AsSingle()
                 .WithArguments(cameraOffset);
+
+            Container
+                .Bind<GameCycle>()
+                .AsSingle();
+
+            Container
+                .BindInterfacesTo<GameCycleController>()
+                .AsSingle();
 
         }
     }
