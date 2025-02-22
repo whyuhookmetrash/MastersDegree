@@ -166,7 +166,6 @@ GameObject:
   - component: {fileID: 153710678}
   - component: {fileID: 153710684}
   - component: {fileID: 153710683}
-  - component: {fileID: 153710682}
   - component: {fileID: 153710681}
   - component: {fileID: 153710680}
   - component: {fileID: 153710679}
@@ -430,22 +429,6 @@ TilemapCollider2D:
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
   m_UseDelaunayMesh: 0
---- !u!114 &153710682
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153710677}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!483693784 &153710683
 TilemapRenderer:
   m_ObjectHideFlags: 0
@@ -10697,7 +10680,6 @@ GameObject:
   m_Component:
   - component: {fileID: 234095378}
   - component: {fileID: 234095380}
-  - component: {fileID: 234095379}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -10720,22 +10702,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2062625235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &234095379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 234095377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 0
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!212 &234095380
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11011,6 +10977,8 @@ GameObject:
   - component: {fileID: 915529745}
   - component: {fileID: 915529746}
   - component: {fileID: 915529747}
+  - component: {fileID: 915529748}
+  - component: {fileID: 915529749}
   m_Layer: 0
   m_Name: '[SYSTEM]'
   m_TagString: Untagged
@@ -11066,6 +11034,7 @@ MonoBehaviour:
   _parentNewObjectsUnderSceneContext: 0
   _contractNames: []
   _parentContractNames: []
+  _kernel: {fileID: 915529749}
 --- !u!114 &915529747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11080,6 +11049,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpawnPoint: {fileID: 0}
   playerPrefab: {fileID: 3792223270347642590, guid: ebae47b6a79a9d444ba9f5ad60cdf4ff, type: 3}
+--- !u!114 &915529748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915529744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fec6ff75339573a45b7726e823387d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &915529749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 915529744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8000e9598e262f743b3354474daf60a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1414966899
 GameObject:
   m_ObjectHideFlags: 0

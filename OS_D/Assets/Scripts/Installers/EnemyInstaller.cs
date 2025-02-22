@@ -11,7 +11,7 @@ namespace Game
             EnemyBase enemy = gameObject.GetComponent<EnemyBase>();
 
             Container
-                .Bind<EnemyBase>()
+                .BindInterfacesAndSelfTo<EnemyBase>()
                 .FromInstance(enemy)
                 .AsSingle();
 

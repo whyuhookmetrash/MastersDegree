@@ -4,7 +4,7 @@ using Zenject;
 
 namespace Game
 {
-    public sealed class MoveController: IInitializable, IDisposable
+    public sealed class MoveController: IGameStartListener, IGameFinishListener
     {
         private readonly Player player;
         private readonly IMoveInput moveInput;
@@ -15,12 +15,12 @@ namespace Game
             this.moveInput = moveInput;
         }
 
-        void IInitializable.Initialize()
+        void IGameStartListener.OnStartGame()
         {
             this.moveInput.OnMoveInput += this.player.Move;
         }
 
-        void IDisposable.Dispose()
+        void IGameFinishListener.OnFinishGame()
         {
             this.moveInput.OnMoveInput -= this.player.Move;
         }
